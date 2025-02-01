@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless Communication Systems Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wireless Communication Systems Simulator</h1>
+    </header>
+    <section id="simulation">
+        <h2>Simulate Wireless Channel</h2>
+        <button onclick="simulateChannel()">Start Simulation</button>
+
+        <div id="output"></div>
+
+        <!-- Sliders to control parameters dynamically -->
+        <h3>Adjust Parameters:</h3>
+        <label for="frequency">Frequency (GHz): </label>
+        <input type="range" id="frequency" min="0.5" max="3" step="0.1" value="2.4">
+        <span id="frequencyValue">2.4</span> GHz
+        <br><br>
+        
+        <label for="bandwidth">Bandwidth (MHz): </label>
+        <input type="range" id="bandwidth" min="1" max="100" step="1" value="20">
+        <span id="bandwidthValue">20</span> MHz
+        <br><br>
+        
+        <label for="snr">Signal-to-Noise Ratio (dB): </label>
+        <input type="range" id="snr" min="0" max="30" step="1" value="10">
+        <span id="snrValue">10</span> dB
+        <br><br>
+        
+        <button onclick="simulateMIMO()">Simulate MIMO</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
